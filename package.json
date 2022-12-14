@@ -4,26 +4,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "extract": "i18next --config ./i18next-parser.config.js",
-    "//extract": "i18next-scanner 'src/**/*.js'"
+    "extract": "i18next --config ./i18next-parser.config.js"
   },
   "dependencies": {
-    "babel-plugin-formatjs": "^10.3.35",
-    "chalk": "^5.2.0",
-    "extract-react-intl-messages": "^4.1.1",
     "i18next": "^22.4.5",
-    "i18next-browser-languagedetector": "^7.0.1",
-    "i18next-http-backend": "^2.1.0",
-    "i18next-parser": "^7.1.0",
-    "i18next-scanner": "^4.1.0",
     "next": "latest",
     "next-i18next": "^13.0.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-i18next": "^12.1.1",
-    "react-intl": "^6.2.5"
+    "react-i18next": "^12.1.1"
   },
   "devDependencies": {
-    "@formatjs/cli": "^5.1.7"
+    "i18next-parser": "^7.1.0"
   }
 }
