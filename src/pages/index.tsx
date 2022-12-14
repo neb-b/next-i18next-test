@@ -1,28 +1,24 @@
-import Link from "next/link"
-import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
+import Heading from "../components/Heading"
 
 const Index = () => {
-  const { t } = useTranslation("common")
+  const { t } = useTranslation("homepage")
 
   return (
     <div>
-      <Link href="/two">two</Link>
-
-      <h1>{t("Welcome to React")}</h1>
-      <h1>{t("Welcome to React???")}</h1>
+      <h1>{t("Welcome to i18next")}</h1>
+      <Heading />
     </div>
   )
 }
 
-export default Index
-
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale)),
-      // Will be passed to the page component as props
+      ...(await serverSideTranslations(locale, ["homepage", "common"])),
     },
   }
 }
+
+export default Index
